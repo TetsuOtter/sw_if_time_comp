@@ -17,6 +17,7 @@ int main(void)
     ValCheck(vals[i]);
   fin_time = clock();
   printf("==============================\n");
-  printf("result : %lf[ms]\n", (double)(fin_time - start_time) / CLOCKS_PER_SEC);
+  printf("result : %lf[s]\n", (double)(fin_time - start_time) / CLOCKS_PER_SEC);
+  fprintf(stderr, "result : %lf[s]\n", (double)(fin_time - start_time) / CLOCKS_PER_SEC);
   return EXIT_SUCCESS;
 }

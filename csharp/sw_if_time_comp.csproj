@@ -6,7 +6,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+<<<<<<< Updated upstream
     <Optimize>false</Optimize>
+=======
+    <Optimize>true</Optimize>
+>>>>>>> Stashed changes
   </PropertyGroup>
 
 </Project>

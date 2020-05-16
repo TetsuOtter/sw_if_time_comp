@@ -1,3 +1,23 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+*.result
+
+>>>>>>> Stashed changes
+# vs files
+.vs/
+.vscode/
+obj/
+bin/
+
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 # Prerequisites
 *.d
 

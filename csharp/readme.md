@@ -1,27 +1,22 @@
-# switch if �������x��r in C#
-�R�[�h���Ŏw�肵��LOOP_TIME����, "for���[�v+����", "switch-case+����", "if-else+����"���s��.  
-���ꂼ��ɂ���, Stopwatch��p���Ď��Ԍv�����s��, �Ō�ɂ��̌��ʂ��o�͂���.
+# switch if 処理速度比較 in C#
+コード内で指定したLOOP_TIMEだけ, "forループ+処理", "switch-case+処理", "if-else+処理"を行う.  
+それぞれについて, Stopwatchを用いて時間計測を行い, 最後にその結果を出力する.
 
-ValCheck_IF.cs�����ValCheck_SW�̃R�[�h������, ���f�B���N�g���ɂ���test_file_print.c��p���čs����.
+ValCheck_IF.csおよびValCheck_SWのコード生成は, 同ディレクトリにあるtest_file_print.cを用いて行った.
 
-<<<<<<< Updated upstream
-## �茳�̊��ł̎��s����
+## 手元の環境での実行結果
 =======
-## ���s����1
->>>>>>> Stashed changes
-### ����
+## 実行結果1
+### 条件
 |param|value|
 |-|-|
 |LOOP_TIME|10000|
 |Configuration|Debug|
 |Platform|AnyCPU|
 |TargetFramework|.NetCore3.1|
-<<<<<<< Updated upstream
-=======
 |Optmize|false|
->>>>>>> Stashed changes
 
-### �o��
+### 出力
 ~~~
 Completed.      TicksPerMillisecond:10000       for:4568        switch:108468   if:219325
 ~~~
@@ -29,10 +24,8 @@ Completed.      TicksPerMillisecond:10000       for:4568        switch:108468   
 |-|-|-|
 |0.4568[ms]|10.8468[ms]|21.9325[ms]|
 
-<<<<<<< Updated upstream
-=======
-## ���s����2
-### ����
+## 実行結果2
+### 条件
 |param|value|
 |-|-|
 |LOOP_TIME|10000|
@@ -41,7 +34,7 @@ Completed.      TicksPerMillisecond:10000       for:4568        switch:108468   
 |TargetFramework|.NetCore3.1|
 |Optmize|true|
 
-### �o��
+### 出力
 ~~~
 Completed.      TicksPerMillisecond:10000       for:1913        switch:134258   if:83362
 ~~~
@@ -49,11 +42,9 @@ Completed.      TicksPerMillisecond:10000       for:1913        switch:134258   
 |-|-|-|
 |0.1913[ms]|13.4258[ms]|8.3362[ms]|
 
-## ���_
-����ȉ�����s�����킯�ł͂Ȃ��̂Ŋm���ɂ����ł���Ƃ�����킯�ł͂Ȃ���, �œK���������switch-case����if-else�̕��������Ȃ�.  �Ƃ�����, if�ɂ͍œK����������₷��, ���s���x�������ȉ��ɂȂ�.
+## 結論
+そんな何回も行ったわけではないので確実にそうであるといえるわけではないが, 最適化をするとswitch-caseよりもif-elseの方が速くなる.  というか, ifには最適化がかかりやすく, 実行速度が半分以下になる.
 
-
->>>>>>> Stashed changes
-## ���Ȃ݂�
-�茳�̊�����, if�����Ȃ��Ƃ�2000�i�𒴂����, �u�����������邩���G�����ā`�v�Ƃ������ăr���h�ł��Ȃ�����.  
-1024�ŋ�؂��Ă�̂��ȂƂ��v������.
+## ちなみに
+手元の環境だと, ifが少なくとも2000段を超えると, 「式が長すぎるか複雑すぎて～」とか言われてビルドできなかった.  
+1024で区切ってるのかなとか思ったり.

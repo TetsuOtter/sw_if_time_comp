@@ -1,3 +1,5 @@
+*.result
+
 # vs files
 .vs/
 .vscode/
